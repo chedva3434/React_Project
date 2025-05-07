@@ -8,7 +8,6 @@ import Login from "./component/login.tsx";
 import { UserProvider } from "./UseContext/userContext.tsx";
 import SighnIn from "./component/SighnIn.tsx";
 import Recipes from "./component/recipes.tsx";
-import CategoryProvider from "./UseContext/cetagoryContext.tsx";
 import AddRecipe from "./component/addrecies.tsx";
 import MyRecipes from "./component/myRecipe.tsx";
 
@@ -52,9 +51,7 @@ const Routes = createBrowserRouter([
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <UserProvider>
-      <CategoryProvider>
         <RouterProvider router={Routes} />
-      </CategoryProvider>
     </UserProvider>
   </StrictMode>
 );
